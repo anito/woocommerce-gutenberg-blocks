@@ -87,6 +87,7 @@ class Library {
 			'AllReviews',
 			'FeaturedCategory',
 			'FeaturedProduct',
+			'AowProduct',
 			'HandpickedProducts',
 			'ProductBestSellers',
 			'ProductCategories',
