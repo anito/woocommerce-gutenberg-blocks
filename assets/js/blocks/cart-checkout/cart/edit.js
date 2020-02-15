@@ -7,7 +7,10 @@ import { Fragment } from '@wordpress/element';
 import PropTypes from 'prop-types';
 import { withFeedbackPrompt } from '@woocommerce/block-hocs';
 import ViewSwitcher from '@woocommerce/block-components/view-switcher';
+<<<<<<< HEAD
 import { previewCart } from '@woocommerce/resource-previews';
+=======
+>>>>>>> init
 
 /**
  * Internal dependencies
@@ -41,10 +44,14 @@ const CartEditor = ( { className } ) => {
 					<Fragment>
 						{ currentView === 'full' && (
 							<Disabled>
+<<<<<<< HEAD
 								<FullCart
 									cartItems={ previewCart.items }
 									cartTotals={ previewCart.totals }
 								/>
+=======
+								<FullCart />
+>>>>>>> init
 							</Disabled>
 						) }
 						<EmptyCart hidden={ currentView === 'full' } />

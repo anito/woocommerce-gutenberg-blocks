@@ -225,22 +225,38 @@ class ProductQuery {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Get results of query.
+=======
+	 * Get objects.
+>>>>>>> init
 	 *
 	 * @param \WP_REST_Request $request Request data.
 	 * @return array
 	 */
+<<<<<<< HEAD
 	public function get_results( $request ) {
+=======
+	public function get_objects( $request ) {
+>>>>>>> init
 		$query_args = $this->prepare_objects_query( $request );
 
 		add_filter( 'posts_clauses', [ $this, 'add_query_clauses' ], 10, 2 );
 
 		$query       = new \WP_Query();
+<<<<<<< HEAD
 		$results     = $query->query( $query_args );
 		$total_posts = $query->found_posts;
 
 		// Out-of-bounds, run the query again without LIMIT for total count.
 		if ( $total_posts < 1 && $query_args['paged'] > 1 ) {
+=======
+		$result      = $query->query( $query_args );
+		$total_posts = $query->found_posts;
+
+		// Out-of-bounds, run the query again without LIMIT for total count.
+		if ( $total_posts < 1 ) {
+>>>>>>> init
 			unset( $query_args['paged'] );
 			$count_query = new \WP_Query();
 			$count_query->query( $query_args );
@@ -250,13 +266,18 @@ class ProductQuery {
 		remove_filter( 'posts_clauses', [ $this, 'add_query_clauses' ], 10 );
 
 		return [
+<<<<<<< HEAD
 			'results' => $results,
+=======
+			'objects' => array_map( 'wc_get_product', $result ),
+>>>>>>> init
 			'total'   => (int) $total_posts,
 			'pages'   => (int) ceil( $total_posts / (int) $query->query_vars['posts_per_page'] ),
 		];
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Get objects.
 	 *
 	 * @param \WP_REST_Request $request Request data.
@@ -284,6 +305,8 @@ class ProductQuery {
 	}
 
 	/**
+=======
+>>>>>>> init
 	 * Add in conditional search filters for products.
 	 *
 	 * @param array     $args Query args.

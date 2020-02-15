@@ -27,7 +27,11 @@ registerBlockType( 'woocommerce/all-reviews', {
 	category: 'woocommerce',
 	keywords: [ __( 'WooCommerce', 'woo-gutenberg-products-block' ) ],
 	description: __(
+<<<<<<< HEAD
 		'Show a list of all product reviews.',
+=======
+		'Shows a list of all product reviews.',
+>>>>>>> init
 		'woo-gutenberg-products-block'
 	),
 	supports: {
