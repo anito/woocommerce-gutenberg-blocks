@@ -123,7 +123,11 @@ class CartShippingRateSchema extends AbstractSchema {
 					'readonly'    => true,
 				],
 				'price'         => [
+<<<<<<< HEAD
 					'description' => __( 'Price of this shipping rate using the smallest unit of the currency.', 'woo-gutenberg-products-block' ),
+=======
+					'description' => __( 'Price of this shipping rate.', 'woo-gutenberg-products-block' ),
+>>>>>>> init
 					'type'        => 'string',
 					'context'     => [ 'view', 'edit' ],
 					'readonly'    => true,
@@ -208,7 +212,11 @@ class CartShippingRateSchema extends AbstractSchema {
 				'name'          => $this->prepare_html_response( $this->get_rate_prop( $rate, 'label' ) ),
 				'description'   => $this->prepare_html_response( $this->get_rate_prop( $rate, 'description' ) ),
 				'delivery_time' => $this->prepare_html_response( $this->get_rate_prop( $rate, 'delivery_time' ) ),
+<<<<<<< HEAD
 				'price'         => $this->prepare_money_response( $this->get_rate_prop( $rate, 'cost' ), wc_get_price_decimals() ),
+=======
+				'price'         => $this->get_rate_prop( $rate, 'cost' ),
+>>>>>>> init
 				'rate_id'       => $this->get_rate_prop( $rate, 'id' ),
 				'instance_id'   => $this->get_rate_prop( $rate, 'instance_id' ),
 				'method_id'     => $this->get_rate_prop( $rate, 'method_id' ),

@@ -1,7 +1,11 @@
 /**
  * External dependencies
  */
+<<<<<<< HEAD
 import { select, dispatch } from '@wordpress/data-controls';
+=======
+import { select } from '@wordpress/data-controls';
+>>>>>>> init
 import { addQueryArgs } from '@wordpress/url';
 
 /**
@@ -17,6 +21,7 @@ import { STORE_KEY } from './constants';
 import { apiFetchWithHeaders } from './controls';
 
 /**
+<<<<<<< HEAD
  * Check if the store needs invalidating due to a change in last modified headers.
  *
  * @param {number} timestamp Last update timestamp.
@@ -33,6 +38,8 @@ function* invalidateModifiedCollection( timestamp ) {
 }
 
 /**
+=======
+>>>>>>> init
  * Resolver for retrieving a collection via a api route.
  *
  * @param {string} namespace
@@ -60,6 +67,7 @@ export function* getCollection( namespace, resourceName, query, ids ) {
 			headers,
 		} = yield apiFetchWithHeaders( route + queryString );
 
+<<<<<<< HEAD
 		if ( headers && headers.get && headers.has( 'last-modified' ) ) {
 			// Do any invalidation before the collection is received to prevent
 			// this query running again.
@@ -68,6 +76,8 @@ export function* getCollection( namespace, resourceName, query, ids ) {
 			);
 		}
 
+=======
+>>>>>>> init
 		yield receiveCollection( namespace, resourceName, queryString, ids, {
 			items,
 			headers,
@@ -82,7 +92,10 @@ export function* getCollection( namespace, resourceName, query, ids ) {
 		);
 	}
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> init
 /**
  * Resolver for retrieving a specific collection header for the given arguments
  *

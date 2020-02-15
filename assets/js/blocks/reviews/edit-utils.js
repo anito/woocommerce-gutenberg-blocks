@@ -1,8 +1,14 @@
 /**
  * External dependencies
  */
+<<<<<<< HEAD
 import { __ } from '@wordpress/i18n';
 import { __experimentalCreateInterpolateElement } from 'wordpress-element';
+=======
+import { __, sprintf } from '@wordpress/i18n';
+import { Fragment, RawHTML } from '@wordpress/element';
+import { escapeHTML } from '@wordpress/escape-html';
+>>>>>>> init
 import {
 	Notice,
 	ToggleControl,
@@ -35,7 +41,11 @@ export const getBlockControls = ( editMode, setAttributes ) => (
 
 export const getSharedReviewContentControls = ( attributes, setAttributes ) => {
 	return (
+<<<<<<< HEAD
 		<>
+=======
+		<Fragment>
+>>>>>>> init
 			<ToggleControl
 				label={ __( 'Product rating', 'woo-gutenberg-products-block' ) }
 				checked={ attributes.showReviewRating }
@@ -50,6 +60,7 @@ export const getSharedReviewContentControls = ( attributes, setAttributes ) => {
 					className="wc-block-reviews__notice"
 					isDismissible={ false }
 				>
+<<<<<<< HEAD
 					{ __experimentalCreateInterpolateElement(
 						__(
 							'Product rating is disabled in your <a>store settings</a>.',
@@ -68,6 +79,23 @@ export const getSharedReviewContentControls = ( attributes, setAttributes ) => {
 							),
 						}
 					) }
+=======
+					<RawHTML>
+						{ sprintf(
+							escapeHTML(
+								/* translators: A notice that links to WooCommerce settings. */
+								__(
+									'Product rating is disabled in your %sstore settings%s.',
+									'woo-gutenberg-products-block'
+								)
+							),
+							`<a href="${ getAdminLink(
+								'admin.php?page=wc-settings&tab=products'
+							) }" target="_blank">`,
+							'</a>'
+						) }
+					</RawHTML>
+>>>>>>> init
 				</Notice>
 			) }
 			<ToggleControl
@@ -107,7 +135,11 @@ export const getSharedReviewContentControls = ( attributes, setAttributes ) => {
 				}
 			/>
 			{ attributes.showReviewImage && (
+<<<<<<< HEAD
 				<>
+=======
+				<Fragment>
+>>>>>>> init
 					<ToggleButtonControl
 						label={ __(
 							'Review image',
@@ -139,6 +171,7 @@ export const getSharedReviewContentControls = ( attributes, setAttributes ) => {
 							className="wc-block-reviews__notice"
 							isDismissible={ false }
 						>
+<<<<<<< HEAD
 							{ __experimentalCreateInterpolateElement(
 								__(
 									'Reviewer photo is disabled in your <a>site settings</a>.',
@@ -162,6 +195,28 @@ export const getSharedReviewContentControls = ( attributes, setAttributes ) => {
 				</>
 			) }
 		</>
+=======
+							<RawHTML>
+								{ sprintf(
+									escapeHTML(
+										/* translators: A notice that links to WordPress settings. */
+										__(
+											'Reviewer photo is disabled in your %ssite settings%s.',
+											'woo-gutenberg-products-block'
+										)
+									),
+									`<a href="${ getAdminLink(
+										'options-discussion.php'
+									) }" target="_blank">`,
+									'</a>'
+								) }
+							</RawHTML>
+						</Notice>
+					) }
+				</Fragment>
+			) }
+		</Fragment>
+>>>>>>> init
 	);
 };
 
@@ -170,7 +225,11 @@ export const getSharedReviewListControls = ( attributes, setAttributes ) => {
 	const maxPerPage = 20;
 
 	return (
+<<<<<<< HEAD
 		<>
+=======
+		<Fragment>
+>>>>>>> init
 			<ToggleControl
 				label={ __( 'Order by', 'woo-gutenberg-products-block' ) }
 				checked={ attributes.showOrderby }
@@ -224,6 +283,10 @@ export const getSharedReviewListControls = ( attributes, setAttributes ) => {
 					min={ minPerPage }
 				/>
 			) }
+<<<<<<< HEAD
 		</>
+=======
+		</Fragment>
+>>>>>>> init
 	);
 };

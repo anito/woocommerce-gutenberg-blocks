@@ -20,7 +20,11 @@ registerBlockType( 'woocommerce/active-filters', {
 	category: 'woocommerce',
 	keywords: [ __( 'WooCommerce', 'woo-gutenberg-products-block' ) ],
 	description: __(
+<<<<<<< HEAD
 		'Show the currently active product filters. Works in combination with the All Products and filters blocks.',
+=======
+		'Display a list of active product filters. Works in combination with the Filter Products by Price and Filter Products by Attribute blocks.',
+>>>>>>> init
 		'woo-gutenberg-products-block'
 	),
 	supports: {

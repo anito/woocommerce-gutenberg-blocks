@@ -8,7 +8,11 @@ import CheckoutForm from '@woocommerce/base-components/checkout/form';
 import NoShipping from '@woocommerce/base-components/checkout/no-shipping';
 import TextInput from '@woocommerce/base-components/text-input';
 import { ShippingCountryInput } from '@woocommerce/base-components/country-input';
+<<<<<<< HEAD
 import { ShippingStateInput } from '@woocommerce/base-components/state-input';
+=======
+import { ShippingCountyInput } from '@woocommerce/base-components/county-input';
+>>>>>>> init
 import ShippingRatesControl from '@woocommerce/base-components/shipping-rates-control';
 import InputRow from '@woocommerce/base-components/input-row';
 import { CheckboxControl } from '@wordpress/components';
@@ -19,7 +23,10 @@ import {
 	ExpressCheckoutFormControl,
 	PaymentMethods,
 } from '@woocommerce/base-components/payment-methods';
+<<<<<<< HEAD
 import { decodeEntities } from '@wordpress/html-entities';
+=======
+>>>>>>> init
 
 /**
  * Internal dependencies
@@ -173,7 +180,11 @@ const Block = ( { shippingMethods = [], isEditor = false } ) => {
 								setShippingFields( {
 									...shippingFields,
 									country: newValue,
+<<<<<<< HEAD
 									state: '',
+=======
+									county: '',
+>>>>>>> init
 								} )
 							}
 						/>
@@ -192,6 +203,7 @@ const Block = ( { shippingMethods = [], isEditor = false } ) => {
 						/>
 					</InputRow>
 					<InputRow>
+<<<<<<< HEAD
 						<ShippingStateInput
 							country={ shippingFields.country }
 							label={ __(
@@ -203,6 +215,19 @@ const Block = ( { shippingMethods = [], isEditor = false } ) => {
 								setShippingFields( {
 									...shippingFields,
 									state: newValue,
+=======
+						<ShippingCountyInput
+							country={ shippingFields.country }
+							label={ __(
+								'County',
+								'woo-gutenberg-products-block'
+							) }
+							value={ shippingFields.county }
+							onChange={ ( newValue ) =>
+								setShippingFields( {
+									...shippingFields,
+									county: newValue,
+>>>>>>> init
 								} )
 							}
 						/>
@@ -211,11 +236,19 @@ const Block = ( { shippingMethods = [], isEditor = false } ) => {
 								'Postal code',
 								'woo-gutenberg-products-block'
 							) }
+<<<<<<< HEAD
 							value={ shippingFields.postcode }
 							onChange={ ( newValue ) =>
 								setShippingFields( {
 									...shippingFields,
 									postcode: newValue,
+=======
+							value={ shippingFields.postalCode }
+							onChange={ ( newValue ) =>
+								setShippingFields( {
+									...shippingFields,
+									postalCode: newValue,
+>>>>>>> init
 								} )
 							}
 						/>
@@ -270,8 +303,13 @@ const Block = ( { shippingMethods = [], isEditor = false } ) => {
 												shippingFields.streetAddress,
 											address_2: shippingFields.apartment,
 											city: shippingFields.city,
+<<<<<<< HEAD
 											state: shippingFields.state,
 											postcode: shippingFields.postcode,
+=======
+											state: shippingFields.county,
+											postcode: shippingFields.postalCode,
+>>>>>>> init
 											country: shippingFields.country,
 									  }
 									: null
@@ -287,11 +325,17 @@ const Block = ( { shippingMethods = [], isEditor = false } ) => {
 								} )
 							}
 							renderOption={ ( option ) => ( {
+<<<<<<< HEAD
 								label: decodeEntities( option.name ),
 								value: option.rate_id,
 								description: decodeEntities(
 									option.description
 								),
+=======
+								label: option.name,
+								value: option.rate_id,
+								description: option.description,
+>>>>>>> init
 								secondaryLabel: (
 									<FormattedMonetaryAmount
 										currency={ getCurrencyFromPriceResponse(
@@ -300,9 +344,13 @@ const Block = ( { shippingMethods = [], isEditor = false } ) => {
 										value={ option.price }
 									/>
 								),
+<<<<<<< HEAD
 								secondaryDescription: decodeEntities(
 									option.delivery_time
 								),
+=======
+								secondaryDescription: option.delivery_time,
+>>>>>>> init
 							} ) }
 							selected={ shippingMethod.methods }
 						/>

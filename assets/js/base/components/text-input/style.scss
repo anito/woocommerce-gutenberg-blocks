@@ -5,16 +5,23 @@
 
 .wc-block-text-input label {
 	position: absolute;
+<<<<<<< HEAD
 	transform: translateY(#{$gap-small});
+=======
+	transform: translateX(#{$gap}) translateY(#{$gap-small});
+>>>>>>> init
 	transform-origin: top left;
 	font-size: 16px;
 	line-height: 22px;
 	color: $gray-50;
 	transition: all 200ms ease;
+<<<<<<< HEAD
 	margin: 0 $gap;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	max-width: calc(100% - #{  2 * $gap });
+=======
+>>>>>>> init
 
 	@media screen and (prefers-reduced-motion: reduce) {
 		transition: none;
@@ -22,7 +29,11 @@
 }
 
 .wc-block-text-input.is-active label {
+<<<<<<< HEAD
 	transform: translateY(#{$gap-smallest}) scale(0.75);
+=======
+	transform: translateX(#{$gap}) translateY(#{$gap-smallest}) scale(0.75);
+>>>>>>> init
 }
 .wc-block-text-input input[type="tel"],
 .wc-block-text-input input[type="url"],

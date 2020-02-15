@@ -173,8 +173,11 @@ class CartSchema extends AbstractSchema {
 	public function get_item_response( $cart ) {
 		$cart_coupon_schema = new CartCouponSchema();
 		$cart_item_schema   = new CartItemSchema();
+<<<<<<< HEAD
 		$context            = 'edit';
 
+=======
+>>>>>>> init
 		return [
 			'coupons'        => array_values( array_map( [ $cart_coupon_schema, 'get_item_response' ], array_filter( $cart->get_applied_coupons() ) ) ),
 			'items'          => array_values( array_map( [ $cart_item_schema, 'get_item_response' ], array_filter( $cart->get_cart() ) ) ),
@@ -192,9 +195,13 @@ class CartSchema extends AbstractSchema {
 					'total_discount_tax' => $this->prepare_money_response( $cart->get_discount_tax(), wc_get_price_decimals() ),
 					'total_shipping'     => $this->prepare_money_response( $cart->get_shipping_total(), wc_get_price_decimals() ),
 					'total_shipping_tax' => $this->prepare_money_response( $cart->get_shipping_tax(), wc_get_price_decimals() ),
+<<<<<<< HEAD
 
 					// Explicitly request context='edit'; default ('view') will render total as markup.
 					'total_price'        => $this->prepare_money_response( $cart->get_total( $context ), wc_get_price_decimals() ),
+=======
+					'total_price'        => $this->prepare_money_response( $cart->get_total(), wc_get_price_decimals() ),
+>>>>>>> init
 					'total_tax'          => $this->prepare_money_response( $cart->get_total_tax(), wc_get_price_decimals() ),
 					'tax_lines'          => $this->get_tax_lines( $cart ),
 				]
