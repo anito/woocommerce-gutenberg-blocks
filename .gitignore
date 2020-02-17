@@ -72,4 +72,8 @@ xcuserdata
 # svn & cvs
 .svn
 CVS
+<<<<<<< HEAD
+>>>>>>> init
+=======
+package-lock.json
 >>>>>>> init
