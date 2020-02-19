@@ -115,6 +115,7 @@ const stableMainEntry = {
 	'products-by-attribute':
 		'./assets/js/blocks/products-by-attribute/index.js',
 	'featured-product': './assets/js/blocks/featured-product/index.js',
+	'product-meta': './assets/js/blocks/product-meta/index.js',
 	'all-reviews': './assets/js/blocks/reviews/all-reviews/index.js',
 	'reviews-by-product':
 		'./assets/js/blocks/reviews/reviews-by-product/index.js',

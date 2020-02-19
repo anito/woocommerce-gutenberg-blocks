@@ -38,11 +38,7 @@ const PackageOptions = ( {
 		secondaryLabel,
 		description,
 		secondaryDescription,
-<<<<<<< HEAD
 	} = renderOption( options[ 0 ] );
-=======
-	} = renderOption( selected );
->>>>>>> init
 
 	return (
 		<RadioControlOptionLayout

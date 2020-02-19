@@ -1,0 +1,1412 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Blocks\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-06 17:30+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.3.1; wp-5.3.2"
+
+#. %s: coupon code
+#: src/RestApi/StoreApi/Utilities/CartController.php:268
+#, php-format
+msgid ""
+"\"%s\" has already been applied and cannot be used in conjunction with other "
+"coupons."
+msgstr ""
+
+#. %s: product name
+#: src/RestApi/StoreApi/Utilities/CartController.php:78
+#, php-format
+msgid "\"%s\" is already inside your cart."
+msgstr ""
+
+#. 1: Rate ID, 2: list of valid ids
+#: src/RestApi/StoreApi/Controllers/CartOrder.php:336
+#, php-format
+msgid "%1$s is not a valid shipping rate ID. Select one of the following: %2$s"
+msgstr ""
+
+#: src/RestApi/StoreApi/Utilities/CartController.php:412
+#, php-format
+msgid "%s is a required field"
+msgid_plural "%s are required fields"
+msgstr[0] ""
+msgstr[1] ""
+
+#. %s: product name
+#: src/RestApi/StoreApi/Utilities/ReserveStock.php:41
+#, php-format
+msgid "%s is out of stock and cannot be purchased."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartItemSchema.php:68
+#: src/RestApi/StoreApi/Schemas/ProductSchema.php:59
+msgid ""
+"A short summary (or excerpt from the full description) for the product in "
+"HTML format."
+msgstr ""
+
+#: src/RestApi/Controllers/Products.php:430
+#: src/RestApi/StoreApi/Schemas/ProductSchema.php:217
+msgid "Add to cart button parameters."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:176
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:239
+msgid "Address line 1"
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:181
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:244
+msgid "Address line 2"
+msgstr ""
+
+#: src/RestApi/Controllers/Products.php:359
+#: src/RestApi/StoreApi/Schemas/ProductSchema.php:140
+msgid "Amount of reviews that the product has."
+msgstr ""
+
+#: src/RestApi/StoreApi/Controllers/ProductAttributeTerms.php:116
+msgid "Attribute does not exist."
+msgstr ""
+
+#: src/RestApi/Controllers/ProductAttributeTerms.php:160
+msgid "Attribute ID."
+msgstr ""
+
+#: src/RestApi/Controllers/ProductAttributeTerms.php:166
+#: src/RestApi/StoreApi/Schemas/ProductAttributeSchema.php:39
+msgid "Attribute name."
+msgstr ""
+
+#: src/RestApi/Controllers/ProductAttributeTerms.php:172
+msgid "Attribute slug."
+msgstr ""
+
+#: src/RestApi/StoreApi/Controllers/Products.php:422
+msgid "Attribute taxonomy name."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/ProductAttributeSchema.php:51
+msgid "Attribute type."
+msgstr ""
+
+#: src/RestApi/Controllers/Cart.php:142
+msgid "Attribute value."
+msgstr ""
+
+#: src/RestApi/Controllers/ProductAttributeTerms.php:154
+msgid "Attribute."
+msgstr ""
+
+#. Author of the plugin
+msgid "Automattic"
+msgstr ""
+
+#. %d: avatar image size in pixels
+#: src/RestApi/Controllers/ProductReviews.php:353
+#, php-format
+msgid "Avatar URL with image size of %d pixels."
+msgstr ""
+
+#: src/RestApi/Controllers/ProductReviews.php:360
+msgid "Avatar URLs for the object reviewer."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/ProductCollectionDataSchema.php:87
+msgid "Average rating"
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:156
+msgid "Billing address."
+msgstr ""
+
+#: src/RestApi/Controllers/Products.php:442
+#: src/RestApi/StoreApi/Schemas/ProductSchema.php:229
+msgid "Button description."
+msgstr ""
+
+#: src/RestApi/Controllers/Products.php:436
+#: src/RestApi/StoreApi/Schemas/ProductSchema.php:223
+msgid "Button text."
+msgstr ""
+
+#: src/RestApi/StoreApi/Controllers/CartItems.php:162
+msgid "Cannot create an existing cart item."
+msgstr ""
+
+#: src/RestApi/StoreApi/Controllers/CartItems.php:144
+#: src/RestApi/StoreApi/Controllers/CartItems.php:195
+#: src/RestApi/StoreApi/Controllers/CartItems.php:217
+msgid "Cart item does not exist."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartSchema.php:71
+msgid "Cart total amounts provided using the smallest unit of the currency."
+msgstr ""
+
+#: src/RestApi/Controllers/ProductCategories.php:215
+msgid "Category URL."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartItemSchema.php:150
+#: src/RestApi/StoreApi/Schemas/OrderItemSchema.php:119
+msgid "Chosen attributes (for variations)."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:186
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:249
+msgid "City name."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartShippingRateSchema.php:51
+#: src/RestApi/StoreApi/Controllers/CartShippingRates.php:202
+msgid "City of the address being shipped to."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CustomerSchema.php:69
+msgid "City of the billing address."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CustomerSchema.php:136
+msgid "City of the shipping address."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CustomerSchema.php:54
+msgid "Company name for the billing address."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CustomerSchema.php:121
+msgid "Company name for the shipping address."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:171
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:234
+msgid "Company name."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:201
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:264
+msgid "Country code in ISO 3166-1 alpha-2 format."
+msgstr ""
+
+#: src/RestApi/StoreApi/Controllers/CartCoupons.php:141
+#: src/RestApi/StoreApi/Controllers/CartCoupons.php:191
+msgid "Coupon does not exist in the cart."
+msgstr ""
+
+#: src/RestApi/StoreApi/Utilities/CartController.php:239
+msgid "Coupon has already been applied."
+msgstr ""
+
+#: src/RestApi/StoreApi/Controllers/CartCoupons.php:158
+msgid "Coupons are disabled."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/AbstractSchema.php:75
+msgid "Currency code (in ISO format) for returned prices."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/AbstractSchema.php:87
+msgid ""
+"Currency minor unit (number of digits after the decimal separator) for "
+"returned prices."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/AbstractSchema.php:81
+msgid ""
+"Currency symbol for the currency which can be used to format returned prices."
+msgstr ""
+
+#: src/RestApi/StoreApi/Controllers/Products.php:205
+msgid "Current page of the collection."
+msgstr ""
+
+#: src/RestApi/Controllers/Products.php:336
+#: src/RestApi/StoreApi/Schemas/ProductSchema.php:93
+msgid "Current product price."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:131
+msgid "Customer ID if registered. Will return 0 for guest orders."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CustomerSchema.php:33
+msgid "Customer ID. Will return 0 if the customer is logged out."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:137
+msgid "Customer IP address."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:143
+msgid "Customer web browser identifier."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/AbstractSchema.php:93
+msgid ""
+"Decimal separator for the currency which can be used to format returned "
+"prices."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartShippingRateSchema.php:118
+msgid "Delivery time estimate text, e.g. 3-5 business days."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartShippingRateSchema.php:112
+msgid "Description of the shipping rate, e.g. Dispatched via USPS."
+msgstr ""
+
+#. 1: valid states
+#: src/RestApi/StoreApi/Controllers/CartShippingRates.php:143
+#, php-format
+msgid "Destination state is not valid. Please enter one of the following: %s"
+msgstr ""
+
+#: src/RestApi/Controllers/Products.php:281
+#: src/RestApi/StoreApi/Controllers/Products.php:456
+msgid "Determines if hidden or visible catalog products are shown."
+msgstr ""
+
+#: src/RestApi/Controllers/Products.php:412
+#: src/RestApi/StoreApi/Schemas/ProductSchema.php:193
+msgid "Does the product have options?"
+msgstr ""
+
+#. %s: number of orders
+#: src/Library.php:149
+#, php-format
+msgid "Drafts <span class=\"count\">(%s)</span>"
+msgid_plural "Drafts <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:206
+msgid "Email address."
+msgstr ""
+
+#: src/RestApi/StoreApi/Controllers/Products.php:258
+msgid "Ensure result set excludes specific IDs."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartShippingRateSchema.php:39
+#: src/RestApi/StoreApi/Controllers/CartShippingRates.php:186
+msgid "First line of the address being shipped to."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CustomerSchema.php:59
+msgid "First line of the billing address."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CustomerSchema.php:126
+msgid "First line of the shipping address."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CustomerSchema.php:44
+msgid "First name of the customer for the billing address."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CustomerSchema.php:111
+msgid "First name of the customer for the shipping address."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:161
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:224
+msgid "First name."
+msgstr ""
+
+#: src/RestApi/Controllers/Products.php:377
+#: src/RestApi/StoreApi/Schemas/CartItemSchema.php:115
+#: src/RestApi/StoreApi/Schemas/ProductSchema.php:158
+#: src/RestApi/StoreApi/Schemas/OrderItemSchema.php:84
+msgid "Full size image URL."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:39
+msgid "Generated order number which may differ from the Order ID."
+msgstr ""
+
+#: src/BlockTypes/ProductCategories.php:187
+msgid "Go to category"
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/ProductAttributeSchema.php:57
+msgid "How terms in this attribute are sorted by default."
+msgstr ""
+
+#. URI of the plugin
+msgid "https://github.com/woocommerce/woocommerce-gutenberg-products-block"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://woocommerce.com"
+msgstr ""
+
+#: src/RestApi/Controllers/Cart.php:119
+msgid "ID of the product this cart item represents."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartShippingRateSchema.php:136
+msgid "ID of the shipping method that provided the rate."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartShippingRateSchema.php:130
+#: src/RestApi/StoreApi/Controllers/CartOrder.php:85
+msgid "ID of the shipping rate."
+msgstr ""
+
+#: src/RestApi/Controllers/Cart.php:124
+msgid "ID of the variation this cart item represents, if applicable."
+msgstr ""
+
+#: src/RestApi/StoreApi/Controllers/ProductCollectionData.php:194
+msgid ""
+"If requested, calculates attribute term counts for products in the "
+"collection."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/ProductAttributeSchema.php:63
+msgid "If this attribute has term archive pages."
+msgstr ""
+
+#: src/RestApi/Controllers/Cart.php:129
+msgid ""
+"If this cart item represents a variation, chosen attributes are shown here."
+msgstr ""
+
+#: src/RestApi/StoreApi/Controllers/ProductCollectionData.php:218
+msgid "If true, calculates rating counts for products in the collection."
+msgstr ""
+
+#: src/RestApi/StoreApi/Controllers/ProductCollectionData.php:188
+msgid ""
+"If true, calculates the minimum and maximum product prices for the "
+"collection."
+msgstr ""
+
+#: src/RestApi/Controllers/Products.php:404
+#: src/RestApi/StoreApi/Schemas/CartItemSchema.php:142
+#: src/RestApi/StoreApi/Schemas/ProductSchema.php:185
+#: src/RestApi/StoreApi/Schemas/OrderItemSchema.php:111
+msgid "Image alternative text."
+msgstr ""
+
+#: src/RestApi/Controllers/Products.php:372
+#: src/RestApi/StoreApi/Schemas/CartItemSchema.php:110
+#: src/RestApi/StoreApi/Schemas/ProductSchema.php:153
+#: src/RestApi/StoreApi/Schemas/OrderItemSchema.php:79
+msgid "Image ID."
+msgstr ""
+
+#: src/RestApi/Controllers/Products.php:399
+#: src/RestApi/StoreApi/Schemas/CartItemSchema.php:137
+#: src/RestApi/StoreApi/Schemas/ProductSchema.php:180
+#: src/RestApi/StoreApi/Schemas/OrderItemSchema.php:106
+msgid "Image name."
+msgstr ""
+
+#: src/RestApi/Controllers/ProductReviews.php:311
+msgid "Image of the product that the review belongs to."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:125
+msgid "Information about the customer that placed the order."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartShippingRateSchema.php:142
+msgid "Instance ID of the shipping method that provided the rate."
+msgstr ""
+
+#: src/RestApi/StoreApi/Controllers/ProductAttributes.php:125
+msgid "Invalid attribute ID."
+msgstr ""
+
+#: src/RestApi/Controllers/Cart.php:176 src/RestApi/Controllers/Cart.php:214
+msgid "Invalid cart item ID."
+msgstr ""
+
+#: src/RestApi/StoreApi/Utilities/CartController.php:231
+msgid "Invalid coupon code."
+msgstr ""
+
+#: src/RestApi/StoreApi/Controllers/Products.php:135
+msgid "Invalid product ID."
+msgstr ""
+
+#. %1$s: Attribute name, %2$s: Allowed values.
+#: src/RestApi/StoreApi/Utilities/CartController.php:397
+#, php-format
+msgid "Invalid value posted for %1$s. Allowed values: %2$s"
+msgstr ""
+
+#: src/RestApi/Controllers/Products.php:424
+#: src/RestApi/StoreApi/Schemas/ProductSchema.php:205
+msgid "Is the product in stock?"
+msgstr ""
+
+#: src/RestApi/Controllers/Products.php:341
+#: src/RestApi/StoreApi/Schemas/ProductSchema.php:74
+msgid "Is the product on sale?"
+msgstr ""
+
+#: src/RestApi/Controllers/Products.php:418
+#: src/RestApi/StoreApi/Schemas/ProductSchema.php:199
+msgid "Is the product purchasable?"
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartShippingRateSchema.php:69
+#: src/RestApi/StoreApi/Controllers/CartShippingRates.php:226
+msgid "ISO code for the country of the address being shipped to."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:191
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:254
+msgid "ISO code or name of the state, province or district."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartShippingRateSchema.php:57
+#: src/RestApi/StoreApi/Controllers/CartShippingRates.php:210
+msgid ""
+"ISO code, or name, for the state, province, or district of the address being "
+"shipped to."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CustomerSchema.php:74
+msgid ""
+"ISO code, or name, for the state, province, or district of the billing "
+"address."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CustomerSchema.php:141
+msgid ""
+"ISO code, or name, for the state, province, or district of the shipping "
+"address."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CustomerSchema.php:84
+msgid "ISO country code for the billing address."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CustomerSchema.php:151
+msgid "ISO country code for the shipping address."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartItemSchema.php:170
+#: src/RestApi/StoreApi/Schemas/OrderItemSchema.php:139
+msgid "Item total amounts provided using the smallest unit of the currency."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CustomerSchema.php:49
+msgid "Last name of the customer for the billing address."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CustomerSchema.php:116
+msgid "Last name of the customer for the shipping address."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:166
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:229
+msgid "Last name."
+msgstr ""
+
+#: src/RestApi/StoreApi/Controllers/Products.php:231
+msgid ""
+"Limit response to resources created after a given ISO8601 compliant date."
+msgstr ""
+
+#: src/RestApi/StoreApi/Controllers/Products.php:238
+msgid ""
+"Limit response to resources created before a given ISO8601 compliant date."
+msgstr ""
+
+#: src/RestApi/StoreApi/Controllers/Products.php:323
+msgid "Limit result set to all items except those of a particular parent ID."
+msgstr ""
+
+#: src/RestApi/StoreApi/Controllers/Products.php:348
+msgid "Limit result set to featured products."
+msgstr ""
+
+#: src/RestApi/StoreApi/Controllers/Products.php:355
+msgid "Limit result set to products assigned a specific category ID."
+msgstr ""
+
+#: src/RestApi/StoreApi/Controllers/Products.php:371
+msgid "Limit result set to products assigned a specific tag ID."
+msgstr ""
+
+#: src/RestApi/StoreApi/Controllers/Products.php:333
+msgid "Limit result set to products assigned a specific type."
+msgstr ""
+
+#: src/RestApi/StoreApi/Controllers/Products.php:401
+msgid ""
+"Limit result set to products based on a maximum price, provided using the "
+"smallest unit of the currency."
+msgstr ""
+
+#: src/RestApi/StoreApi/Controllers/Products.php:394
+msgid ""
+"Limit result set to products based on a minimum price, provided using the "
+"smallest unit of the currency."
+msgstr ""
+
+#: src/RestApi/StoreApi/Controllers/Products.php:387
+msgid "Limit result set to products on sale."
+msgstr ""
+
+#: src/RestApi/StoreApi/Controllers/Products.php:464
+msgid "Limit result set to products with a certain average rating."
+msgstr ""
+
+#: src/RestApi/StoreApi/Controllers/Products.php:416
+msgid "Limit result set to products with selected global attributes."
+msgstr ""
+
+#: src/RestApi/StoreApi/Controllers/Products.php:341
+msgid ""
+"Limit result set to products with specific SKU(s). Use commas to separate."
+msgstr ""
+
+#: src/RestApi/StoreApi/Controllers/Products.php:408
+msgid "Limit result set to products with specified stock status."
+msgstr ""
+
+#: src/RestApi/Controllers/ProductReviews.php:411
+msgid "Limit result set to reviews assigned to specific product IDs."
+msgstr ""
+
+#: src/RestApi/Controllers/ProductReviews.php:420
+msgid "Limit result set to reviews from products within specific category IDs."
+msgstr ""
+
+#: src/RestApi/StoreApi/Controllers/Products.php:268
+msgid "Limit result set to specific ids."
+msgstr ""
+
+#: src/RestApi/StoreApi/Controllers/Products.php:313
+msgid "Limit result set to those of particular parent IDs."
+msgstr ""
+
+#: src/RestApi/StoreApi/Controllers/Products.php:224
+msgid "Limit results to those matching a string."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartItemSchema.php:178
+#: src/RestApi/StoreApi/Schemas/OrderItemSchema.php:147
+msgid "Line price subtotal (excluding coupons and discounts)."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartItemSchema.php:184
+#: src/RestApi/StoreApi/Schemas/OrderItemSchema.php:153
+msgid "Line price subtotal tax."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartItemSchema.php:190
+#: src/RestApi/StoreApi/Schemas/OrderItemSchema.php:159
+msgid "Line price total (including coupons and discounts)."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartItemSchema.php:196
+#: src/RestApi/StoreApi/Schemas/OrderItemSchema.php:165
+msgid "Line price total tax."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartSchema.php:139
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:359
+msgid "Lines of taxes applied to items and shipping."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartSchema.php:33
+msgid "List of applied cart coupons."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:271
+msgid "List of applied coupons."
+msgstr ""
+
+#: src/RestApi/StoreApi/Controllers/Products.php:432
+msgid ""
+"List of attribute slug(s). If a term ID is provided, this will be ignored."
+msgstr ""
+
+#: src/RestApi/StoreApi/Controllers/Products.php:427
+msgid "List of attribute term IDs."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CustomerSchema.php:39
+msgid "List of billing address data."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartShippingRateSchema.php:77
+msgid "List of cart items (keys) the returned shipping rates apply to."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartSchema.php:43
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:281
+msgid "List of cart items."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:69
+msgid "List of events and dates such as creation date."
+msgstr ""
+
+#: src/RestApi/Controllers/Products.php:365
+#: src/RestApi/StoreApi/Schemas/CartItemSchema.php:102
+#: src/RestApi/StoreApi/Schemas/ProductSchema.php:146
+#: src/RestApi/StoreApi/Schemas/OrderItemSchema.php:71
+msgid "List of images."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CustomerSchema.php:106
+msgid "List of shipping address data."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartShippingRateSchema.php:86
+msgid "List of shipping rates."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/ProductCollectionDataSchema.php:47
+msgid "Max price found in collection of products."
+msgstr ""
+
+#: src/RestApi/StoreApi/Controllers/Products.php:214
+msgid "Maximum number of items to be returned in result set."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartShippingRateSchema.php:148
+msgid "Meta data attached to the shipping rate."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartShippingRateSchema.php:155
+msgid "Meta key."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartShippingRateSchema.php:161
+msgid "Meta value."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/ProductCollectionDataSchema.php:33
+msgid ""
+"Min and max prices found in collection of products, provided using the "
+"smallest unit of the currency."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/ProductCollectionDataSchema.php:41
+msgid "Min price found in collection of products."
+msgstr ""
+
+#: src/RestApi/Controllers/Cart.php:197
+msgid "Missing product ID."
+msgstr ""
+
+#. %s: Attribute name.
+#: src/RestApi/StoreApi/Utilities/CartController.php:412
+msgid "Missing variation data for variable product."
+msgstr ""
+
+#: src/RestApi/Controllers/ProductReviews.php:299
+msgid "Name of the product that the review belongs to."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartShippingRateSchema.php:106
+msgid "Name of the shipping rate, e.g. Express shipping."
+msgstr ""
+
+#: src/RestApi/StoreApi/Utilities/CartController.php:437
+msgid "No matching variation found."
+msgstr ""
+
+#. %s: product name
+#: src/RestApi/StoreApi/Utilities/ReserveStock.php:62
+#, php-format
+msgid "Not enough units of %s are available in stock to fulfil this order."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:151
+msgid "Note added to the order by the customer during checkout."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartSchema.php:53
+msgid "Number of items in the cart."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/TermSchema.php:57
+msgid "Number of objects (posts of any type) assigned to the term."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/ProductCollectionDataSchema.php:70
+#: src/RestApi/StoreApi/Schemas/ProductCollectionDataSchema.php:93
+msgid "Number of products."
+msgstr ""
+
+#: src/RestApi/Controllers/ProductCategories.php:209
+msgid "Number of reviews in the category."
+msgstr ""
+
+#: src/RestApi/Controllers/ProductPod.php:180
+#: src/RestApi/Controllers/ProductAttributes.php:178
+#: src/RestApi/Controllers/ProductAow.php:261
+msgid "Number of terms in the attribute taxonomy."
+msgstr ""
+
+#: src/RestApi/Controllers/ProductReviews.php:382
+#: src/RestApi/StoreApi/Controllers/Products.php:278
+msgid "Offset the result set by a specific number of items."
+msgstr ""
+
+#: src/RestApi/Controllers/Products.php:273
+#: src/RestApi/StoreApi/Controllers/Products.php:437
+msgid "Operator to compare product attribute terms."
+msgstr ""
+
+#: src/RestApi/Controllers/Products.php:257
+#: src/RestApi/StoreApi/Controllers/Products.php:362
+msgid "Operator to compare product category terms."
+msgstr ""
+
+#: src/RestApi/Controllers/Products.php:265
+#: src/RestApi/StoreApi/Controllers/Products.php:378
+msgid "Operator to compare product tags."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:51
+msgid ""
+"Order key used to check validity or protect access to certain order data."
+msgstr ""
+
+#: src/RestApi/Controllers/ProductReviews.php:387
+#: src/RestApi/StoreApi/Controllers/Products.php:285
+#: src/RestApi/StoreApi/Controllers/ProductAttributeTerms.php:148
+msgid "Order sort attribute ascending or descending."
+msgstr ""
+
+#: src/Library.php:131 src/Library.php:143
+msgctxt "Order status"
+msgid "Draft"
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:45
+msgid "Order status. Payment providers will update this value after payment."
+msgstr ""
+
+#: src/RestApi/Controllers/ProductReviews.php:305
+msgid "Permalink of the product that the review belongs to."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:212
+msgid "Phone number."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:196
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:259
+msgid "Postal code."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/ProductSchema.php:117
+#: src/RestApi/StoreApi/Schemas/ProductSchema.php:123
+msgid "Price amount."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/ProductSchema.php:85
+msgid "Price data provided using the smallest unit of the currency."
+msgstr ""
+
+#: src/RestApi/Controllers/Products.php:347
+msgid "Price formatted in HTML."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartShippingRateSchema.php:124
+msgid "Price of this shipping rate."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/AbstractSchema.php:105
+#: src/RestApi/StoreApi/Schemas/AbstractSchema.php:111
+msgid ""
+"Price prefix for the currency which can be used to format returned prices."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/ProductSchema.php:111
+msgid "Price range, if applicable."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartItemSchema.php:78
+#: src/RestApi/StoreApi/Schemas/ProductSchema.php:69
+msgid "Product full description in HTML format."
+msgstr ""
+
+#: src/RestApi/Controllers/Variations.php:108
+#: src/RestApi/Controllers/Products.php:309
+#: src/RestApi/StoreApi/Schemas/CartItemSchema.php:62
+#: src/RestApi/StoreApi/Schemas/ProductSchema.php:42
+#: src/RestApi/StoreApi/Schemas/OrderItemSchema.php:52
+msgid "Product name."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartItemSchema.php:73
+#: src/RestApi/StoreApi/Schemas/ProductSchema.php:64
+msgid "Product short description in HTML format."
+msgstr ""
+
+#: src/RestApi/Controllers/Products.php:319
+#: src/RestApi/StoreApi/Schemas/CartItemSchema.php:95
+#: src/RestApi/StoreApi/Schemas/ProductSchema.php:52
+#: src/RestApi/StoreApi/Schemas/OrderItemSchema.php:64
+msgid "Product URL."
+msgstr ""
+
+#: src/RestApi/Controllers/Variations.php:113
+#: src/RestApi/Controllers/Products.php:314
+#: src/RestApi/StoreApi/Schemas/ProductSchema.php:47
+msgid "Product variation attributes, if applicable."
+msgstr ""
+
+#: src/RestApi/Controllers/Cart.php:201
+msgid "Quantity cannot be empty."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartItemSchema.php:89
+#: src/RestApi/StoreApi/Schemas/ProductSchema.php:211
+msgid "Quantity left in stock if stock is low, or null if not applicable."
+msgstr ""
+
+#: src/RestApi/Controllers/Cart.php:114
+#: src/RestApi/StoreApi/Schemas/CartItemSchema.php:53
+#: src/RestApi/StoreApi/Schemas/OrderItemSchema.php:43
+msgid "Quantity of this item in the cart."
+msgstr ""
+
+#: src/RestApi/StoreApi/Controllers/ProductCollectionData.php:206
+msgid ""
+"Query type being performed which may affect counts. Valid values include "
+"\"and\" and \"or\"."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/ProductSchema.php:99
+msgid "Regular product price"
+msgstr ""
+
+#: src/RestApi/Controllers/ProductPod.php:99
+#: src/RestApi/Controllers/ProductPod.php:129
+#: src/RestApi/Controllers/ProductCategories.php:94
+#: src/RestApi/Controllers/ProductAttributes.php:97
+#: src/RestApi/Controllers/ProductAttributes.php:127
+#: src/RestApi/Controllers/ProductAow.php:180
+#: src/RestApi/Controllers/ProductAow.php:210
+#: src/RestApi/Controllers/ProductTags.php:94
+#: src/RestApi/Controllers/ProductAttributeTerms.php:94
+msgid "Resource does not exist."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/ProductCollectionDataSchema.php:79
+msgid "Returns number of products with each average rating."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/ProductCollectionDataSchema.php:56
+msgid "Returns number of products within attribute terms."
+msgstr ""
+
+#: src/RestApi/Controllers/ProductReviews.php:332
+msgid "Review rating (0 to 5)."
+msgstr ""
+
+#: src/RestApi/Controllers/ProductReviews.php:317
+msgid "Reviewer name."
+msgstr ""
+
+#: src/RestApi/Controllers/Products.php:353
+#: src/RestApi/StoreApi/Schemas/ProductSchema.php:134
+msgid "Reviews average rating."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/ProductSchema.php:105
+msgid "Sale product price, if applicable."
+msgstr ""
+
+#: src/BlockTypes/AbstractProductAowGrid.php:446
+#: src/BlockTypes/AbstractProductGrid.php:430
+msgid "Sale!"
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartShippingRateSchema.php:45
+#: src/RestApi/StoreApi/Controllers/CartShippingRates.php:194
+msgid "Second line of the address being shipped to."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CustomerSchema.php:64
+msgid "Second line of the billing address."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CustomerSchema.php:131
+msgid "Second line of the shipping address."
+msgstr ""
+
+#: src/BlockTypes/ProductCategories.php:175
+#: src/BlockTypes/ProductCategories.php:179
+msgid "Select a category"
+msgstr ""
+
+#: src/RestApi/StoreApi/Controllers/CartOrder.php:78
+msgid "Selected shipping rates to apply to the order."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:219
+msgid "Shipping address."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartShippingRateSchema.php:33
+msgid "Shipping destination address."
+msgstr ""
+
+#: src/RestApi/StoreApi/Controllers/CartShippingRates.php:86
+msgid "Shipping destination country is required."
+msgstr ""
+
+#: src/RestApi/Controllers/Products.php:326
+msgid "Short description or excerpt from description."
+msgstr ""
+
+#: src/RestApi/StoreApi/Controllers/ProductAttributeTerms.php:168
+msgid "Should empty terms be hidden?"
+msgstr ""
+
+#: src/RestApi/Controllers/ProductCategories.php:178
+msgid "Should we return how many reviews in a category?"
+msgstr ""
+
+#: src/RestApi/Controllers/ProductReviews.php:338
+msgid "Shows if the reviewer bought the product or not."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:57
+msgid "Shows where the order was created."
+msgstr ""
+
+#: src/RestApi/Controllers/ProductReviews.php:64
+#: src/RestApi/Controllers/Variations.php:62
+#: src/RestApi/Controllers/ProductPod.php:84
+#: src/RestApi/Controllers/ProductAttributes.php:82
+#: src/RestApi/Controllers/ProductAow.php:165
+#: src/RestApi/Controllers/Products.php:90
+msgid "Sorry, you cannot list resources."
+msgstr ""
+
+#: src/RestApi/Controllers/ProductPod.php:103
+#: src/RestApi/Controllers/ProductAttributes.php:101
+#: src/RestApi/Controllers/ProductAow.php:184
+#: src/RestApi/Controllers/Products.php:103
+msgid "Sorry, you cannot view this resource."
+msgstr ""
+
+#: src/RestApi/Controllers/ProductReviews.php:397
+#: src/RestApi/StoreApi/Controllers/Products.php:293
+#: src/RestApi/StoreApi/Controllers/ProductAttributeTerms.php:156
+msgid "Sort collection by object attribute."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartItemSchema.php:83
+#: src/RestApi/StoreApi/Schemas/OrderItemSchema.php:58
+msgid "Stock keeping unit, if applicable."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/ProductAttributeSchema.php:45
+msgid "String based identifier for the attribute, and its WordPress taxonomy."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/TermSchema.php:45
+msgid "String based identifier for the term."
+msgstr ""
+
+#: src/RestApi/Controllers/ProductPod.php:120
+#: src/RestApi/Controllers/ProductCategories.php:85
+#: src/RestApi/Controllers/ProductAttributes.php:118
+#: src/RestApi/Controllers/ProductAow.php:201
+#: src/RestApi/Controllers/ProductTags.php:85
+#: src/RestApi/Controllers/ProductAttributeTerms.php:85
+msgid "Taxonomy does not exist."
+msgstr ""
+
+#: src/RestApi/StoreApi/Controllers/ProductCollectionData.php:200
+msgid "Taxonomy name."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/TermSchema.php:51
+msgid "Term description."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/ProductCollectionDataSchema.php:64
+msgid "Term ID"
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/TermSchema.php:39
+msgid "Term name."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartSchema.php:153
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:373
+msgid "The amount of tax charged."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CustomerSchema.php:99
+msgid "The billing contact number of the customer."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CustomerSchema.php:89
+msgid "The billing email address of the customer."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartItemSchema.php:43
+msgid "The cart item product or variation ID."
+msgstr ""
+
+#: src/RestApi/Controllers/ProductReviews.php:323
+msgid "The content of the review."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartCouponSchema.php:35
+#: src/RestApi/StoreApi/Schemas/OrderCouponSchema.php:31
+msgid "The coupons unique code."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:117
+msgid "The date the order was completed, as GMT."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:111
+msgid "The date the order was completed, in the site's timezone."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:81
+msgid "The date the order was created, as GMT."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:75
+msgid "The date the order was created, in the site's timezone."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:93
+msgid "The date the order was last modified, as GMT."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:87
+msgid "The date the order was last modified, in the site's timezone."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:105
+msgid "The date the order was paid, as GMT."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:99
+msgid "The date the order was paid, in the site's timezone."
+msgstr ""
+
+#: src/RestApi/Controllers/ProductReviews.php:287
+msgid "The date the review was created, as GMT."
+msgstr ""
+
+#: src/RestApi/Controllers/ProductReviews.php:281
+msgid ""
+"The date the review was created, in the site's timezone in human-readable "
+"format."
+msgstr ""
+
+#: src/RestApi/Controllers/ProductReviews.php:275
+msgid "The date the review was created, in the site's timezone."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/OrderItemSchema.php:33
+msgid "The item product or variation ID."
+msgstr ""
+
+#: src/RestApi/StoreApi/Controllers/Products.php:447
+msgid ""
+"The logical relationship between attributes when filtering across multiple "
+"at once."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartSchema.php:147
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:367
+msgid "The name of the tax."
+msgstr ""
+
+#: src/RestApi/Controllers/Cart.php:267
+#: src/RestApi/StoreApi/Utilities/CartController.php:304
+#: src/RestApi/StoreApi/Utilities/CartController.php:514
+msgid "This product cannot be added to the cart."
+msgstr ""
+
+#: src/RestApi/Controllers/Cart.php:271
+#: src/RestApi/StoreApi/Utilities/CartController.php:68
+msgid "This product cannot be purchased."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/AbstractSchema.php:99
+msgid ""
+"Thousand separator for the currency which can be used to format returned "
+"prices."
+msgstr ""
+
+#: src/RestApi/Controllers/Products.php:394
+#: src/RestApi/StoreApi/Schemas/CartItemSchema.php:132
+#: src/RestApi/StoreApi/Schemas/ProductSchema.php:175
+#: src/RestApi/StoreApi/Schemas/OrderItemSchema.php:101
+msgid "Thumbnail sizes for responsive images."
+msgstr ""
+
+#: src/RestApi/Controllers/Products.php:389
+#: src/RestApi/StoreApi/Schemas/CartItemSchema.php:127
+#: src/RestApi/StoreApi/Schemas/ProductSchema.php:170
+#: src/RestApi/StoreApi/Schemas/OrderItemSchema.php:96
+msgid "Thumbnail srcset for responsive images."
+msgstr ""
+
+#: src/RestApi/Controllers/Products.php:383
+#: src/RestApi/StoreApi/Schemas/CartItemSchema.php:121
+#: src/RestApi/StoreApi/Schemas/ProductSchema.php:164
+#: src/RestApi/StoreApi/Schemas/OrderItemSchema.php:90
+msgid "Thumbnail URL."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartCouponSchema.php:44
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:291
+#: src/RestApi/StoreApi/Schemas/OrderCouponSchema.php:37
+msgid "Total amounts provided using the smallest unit of the currency."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartCouponSchema.php:52
+#: src/RestApi/StoreApi/Schemas/OrderCouponSchema.php:45
+msgid "Total discount applied by this coupon."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartSchema.php:103
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:323
+msgid "Total discount from applied coupons."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartSchema.php:91
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:311
+msgid "Total price of any applied fees."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartSchema.php:79
+msgid "Total price of items in the cart."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:299
+msgid "Total price of items in the order."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartSchema.php:115
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:335
+msgid "Total price of shipping."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartSchema.php:127
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:347
+msgid "Total price the customer will pay."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartSchema.php:133
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:353
+msgid "Total tax applied to items and shipping."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartSchema.php:97
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:317
+msgid "Total tax on fees."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartSchema.php:85
+msgid "Total tax on items in the cart."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:305
+msgid "Total tax on items in the order."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartSchema.php:121
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:341
+msgid "Total tax on shipping."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartCouponSchema.php:58
+#: src/RestApi/StoreApi/Schemas/OrderCouponSchema.php:51
+msgid "Total tax removed due to discount applied by this coupon."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartSchema.php:109
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:329
+msgid "Total tax removed due to discount from applied coupons."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartSchema.php:59
+msgid "Total weight (in grams) of all products in the cart."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartSchema.php:65
+msgid ""
+"True if the cart needs shipping. False for carts with only digital goods or "
+"stores with no shipping methods set-up."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:63
+msgid "True if the prices included tax when the order was created."
+msgstr ""
+
+#: src/RestApi/StoreApi/Controllers/Cart.php:84
+#: src/RestApi/StoreApi/Controllers/CartShippingRates.php:82
+msgid "Unable to retrieve cart."
+msgstr ""
+
+#: src/RestApi/StoreApi/Controllers/Customer.php:90
+#: src/RestApi/StoreApi/Controllers/Customer.php:111
+msgid "Unable to retrieve customer."
+msgstr ""
+
+#: src/RestApi/StoreApi/Controllers/ProductAttributeTerms.php:72
+msgid "Unique identifier for the attribute."
+msgstr ""
+
+#: src/RestApi/Controllers/Cart.php:108
+msgid "Unique identifier for the cart item in this cart."
+msgstr ""
+
+#: src/RestApi/StoreApi/Controllers/CartCoupons.php:87
+msgid "Unique identifier for the coupon within the cart."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartItemSchema.php:37
+#: src/RestApi/StoreApi/Controllers/CartItems.php:87
+msgid "Unique identifier for the item within the cart."
+msgstr ""
+
+#: src/RestApi/Controllers/ProductReviews.php:293
+msgid "Unique identifier for the product that the review belongs to."
+msgstr ""
+
+#: src/RestApi/Controllers/ProductReviews.php:269
+#: src/RestApi/Controllers/Variations.php:102
+#: src/RestApi/Controllers/Cart.php:66
+#: src/RestApi/Controllers/ProductPod.php:55
+#: src/RestApi/Controllers/ProductCategories.php:53
+#: src/RestApi/Controllers/ProductAttributes.php:53
+#: src/RestApi/Controllers/ProductAow.php:55
+#: src/RestApi/Controllers/Products.php:61
+#: src/RestApi/Controllers/Products.php:303
+#: src/RestApi/Controllers/ProductTags.php:53
+#: src/RestApi/Controllers/ProductAttributeTerms.php:53
+#: src/RestApi/StoreApi/Schemas/ProductAttributeSchema.php:33
+#: src/RestApi/StoreApi/Schemas/OrderSchema.php:33
+#: src/RestApi/StoreApi/Schemas/TermSchema.php:33
+#: src/RestApi/StoreApi/Schemas/ProductSchema.php:36
+#: src/RestApi/StoreApi/Controllers/ProductAttributes.php:75
+#: src/RestApi/StoreApi/Controllers/Products.php:85
+msgid "Unique identifier for the resource."
+msgstr ""
+
+#: src/RestApi/Controllers/Variations.php:39
+msgid "Unique identifier for the variable product."
+msgstr ""
+
+#: src/RestApi/Controllers/Products.php:331
+#: src/RestApi/StoreApi/Schemas/ProductSchema.php:80
+msgid "Unique identifier."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartItemSchema.php:157
+#: src/RestApi/StoreApi/Schemas/OrderItemSchema.php:126
+msgid "Variation attribute name."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartItemSchema.php:162
+#: src/RestApi/StoreApi/Schemas/OrderItemSchema.php:131
+msgid "Variation attribute value."
+msgstr ""
+
+#: src/RestApi/Controllers/Cart.php:137
+msgid "Variation attribute."
+msgstr ""
+
+#: src/RestApi/StoreApi/Controllers/Products.php:245
+msgid ""
+"When limiting response using after/before, which date column to compare "
+"against."
+msgstr ""
+
+#. Name of the plugin
+msgid "WooCommerce Blocks"
+msgstr ""
+
+#. %1$s is the install command, %2$s is the build command, %3$s is the watch command.
+#: src/Domain/Bootstrap.php:125
+#, php-format
+msgid ""
+"WooCommerce Blocks development mode requires files to be built. From the "
+"plugin directory, run %1$s to install dependencies, %2$s to build the files "
+"or %3$s to build the files and watch for changes."
+msgstr ""
+
+#. Description of the plugin
+msgid "WooCommerce blocks for the Gutenberg editor."
+msgstr ""
+
+#: woocommerce-gutenberg-products-block.php:55
+msgid ""
+"WooCommerce Blocks requires a more recent version of WordPress and has been "
+"paused. Please update WordPress to continue enjoying WooCommerce Blocks."
+msgstr ""
+
+#. %s: product name
+#: src/RestApi/Controllers/Cart.php:276
+#: src/RestApi/StoreApi/Utilities/CartController.php:90
+#, php-format
+msgid ""
+"You cannot add &quot;%s&quot; to the cart because the product is out of "
+"stock."
+msgstr ""
+
+#. %s: product name
+#: src/RestApi/Controllers/Cart.php:284
+#, php-format
+msgid "You cannot add another \"%s\" to your cart."
+msgstr ""
+
+#. 1: product name 2: quantity in stock
+#: src/RestApi/Controllers/Cart.php:297
+#: src/RestApi/StoreApi/Utilities/CartController.php:107
+#, php-format
+msgid ""
+"You cannot add that amount of &quot;%1$s&quot; to the cart because there is "
+"not enough stock (%2$s remaining)."
+msgstr ""
+
+#. 1: composer command. 2: plugin directory
+#: woocommerce-gutenberg-products-block.php:81
+#: woocommerce-gutenberg-products-block.php:99
+#, php-format
+msgid ""
+"Your installation of the WooCommerce Blocks feature plugin is incomplete. "
+"Please run %1$s within the %2$s directory."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CartShippingRateSchema.php:63
+#: src/RestApi/StoreApi/Controllers/CartShippingRates.php:218
+msgid "Zip or Postcode of the address being shipped to."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CustomerSchema.php:79
+msgid "Zip or Postcode of the billing address."
+msgstr ""
+
+#: src/RestApi/StoreApi/Schemas/CustomerSchema.php:146
+msgid "Zip or Postcode of the shipping address."
+msgstr ""

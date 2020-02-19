@@ -59,6 +59,7 @@ class Assets {
 		self::register_script( 'wc-product-top-rated', plugins_url( self::get_block_asset_build_path( 'product-top-rated' ), __DIR__ ), $block_dependencies );
 		self::register_script( 'wc-products-by-attribute', plugins_url( self::get_block_asset_build_path( 'products-by-attribute' ), __DIR__ ), $block_dependencies );
 		self::register_script( 'wc-featured-product', plugins_url( self::get_block_asset_build_path( 'featured-product' ), __DIR__ ), $block_dependencies );
+		self::register_script( 'wc-product-meta', plugins_url( self::get_block_asset_build_path( 'product-meta' ), __DIR__ ), $block_dependencies );
 		self::register_script( 'wc-featured-category', plugins_url( self::get_block_asset_build_path( 'featured-category' ), __DIR__ ), $block_dependencies );
 		self::register_script( 'wc-product-categories', plugins_url( self::get_block_asset_build_path( 'product-categories' ), __DIR__ ), $block_dependencies );
 		self::register_script( 'wc-product-tag', plugins_url( self::get_block_asset_build_path( 'product-tag' ), __DIR__ ), $block_dependencies );

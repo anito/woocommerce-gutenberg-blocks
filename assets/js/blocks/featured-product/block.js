@@ -31,11 +31,14 @@ import { Fragment } from '@wordpress/element';
 import { compose } from '@wordpress/compose';
 import { isEmpty } from 'lodash';
 import PropTypes from 'prop-types';
-import { MIN_HEIGHT } from '@woocommerce/block-settings';
 import ProductControl from '@woocommerce/block-components/product-control';
 import ErrorPlaceholder from '@woocommerce/block-components/error-placeholder';
 import { withProduct } from '@woocommerce/block-hocs';
 import { Icon, star } from '@woocommerce/icons';
+/**
+ * Internal dependencies
+ */
+import { MIN_HEIGHT, MAX_HEIGHT } from '../../custom-settings';
 
 /**
  * Internal dependencies
@@ -291,8 +294,9 @@ const FeaturedProduct = ( {
 		return (
 			<ResizableBox
 				className={ classes }
-				size={ { height } }
+				height={ height }
 				minHeight={ MIN_HEIGHT }
+				maxHeight={ MAX_HEIGHT }
 				enable={ { bottom: true } }
 				onResizeStop={ onResizeStop }
 				style={ style }

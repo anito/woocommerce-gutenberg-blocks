@@ -120,7 +120,6 @@ export function receiveCollectionError(
 		},
 	};
 }
-<<<<<<< HEAD
 
 export function receiveLastModified( timestamp ) {
 	return {
@@ -128,5 +127,3 @@ export function receiveLastModified( timestamp ) {
 		timestamp,
 	};
 }
-=======
->>>>>>> init

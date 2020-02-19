@@ -132,7 +132,6 @@ export const getCollectionHeader = (
 	}
 	return null;
 };
-<<<<<<< HEAD
 
 /**
  * Gets the last modified header for the collection.
@@ -143,5 +142,3 @@ export const getCollectionHeader = (
 export const getCollectionLastModified = ( state ) => {
 	return state.lastModified || 0;
 };
-=======
->>>>>>> init

@@ -90,6 +90,8 @@ class RestApi {
 			'product-categories'            => __NAMESPACE__ . '\RestApi\Controllers\ProductCategories',
 			'product-tags'                  => __NAMESPACE__ . '\RestApi\Controllers\ProductTags',
 			'products'                      => __NAMESPACE__ . '\RestApi\Controllers\Products',
+			'meta'                          => __NAMESPACE__ . '\RestApi\Controllers\Metas',
+			'product-meta'                  => __NAMESPACE__ . '\RestApi\Controllers\ProductMetas',
 			'variations'                    => __NAMESPACE__ . '\RestApi\Controllers\Variations',
 			'product-reviews'               => __NAMESPACE__ . '\RestApi\Controllers\ProductReviews',
 			'store-products'                => __NAMESPACE__ . '\RestApi\StoreApi\Controllers\Products',

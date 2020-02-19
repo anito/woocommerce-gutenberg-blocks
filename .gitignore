@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Editors
 project.xml
 project.properties
@@ -53,7 +52,7 @@ woocommerce-gutenberg-products-block.zip
 storybook-static/
 blocks.ini
 /wp-content/
-=======
+
 # osx noise
 .DS_Store
 profile
@@ -72,8 +71,3 @@ xcuserdata
 # svn & cvs
 .svn
 CVS
-<<<<<<< HEAD
->>>>>>> init
-=======
-package-lock.json
->>>>>>> init
