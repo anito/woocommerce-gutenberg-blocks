@@ -4,12 +4,13 @@
 import { __ } from '@wordpress/i18n';
 import { InnerBlocks } from '@wordpress/editor';
 import { registerBlockType } from '@wordpress/blocks';
-import { DEFAULT_HEIGHT } from '@woocommerce/block-settings';
 import { Icon, star } from '@woocommerce/icons';
 
 /**
  * Internal dependencies
  */
+
+import { DEFAULT_HEIGHT } from '../../custom-settings';
 import './style.scss';
 import './editor.scss';
 import { example } from './example';

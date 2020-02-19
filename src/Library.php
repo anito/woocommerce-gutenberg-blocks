@@ -87,7 +87,11 @@ class Library {
 			'AllReviews',
 			'FeaturedCategory',
 			'FeaturedProduct',
+<<<<<<< HEAD
 			'AowProduct',
+=======
+			'ProductMeta',
+>>>>>>> merge all
 			'HandpickedProducts',
 			'ProductBestSellers',
 			'ProductCategories',
