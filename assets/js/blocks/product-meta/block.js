@@ -39,10 +39,6 @@ import BlockText from '@woocommerce/block-components/block-text';
  * Internal dependencies
  */
 import { MIN_HEIGHT, MAX_HEIGHT } from '../../custom-settings';
-
-/**
- * Internal dependencies
- */
 import { dimRatioToClass, getBackgroundImageStyles } from './utils';
 import { getImageSrcFromProduct } from '../../utils/products';
 
