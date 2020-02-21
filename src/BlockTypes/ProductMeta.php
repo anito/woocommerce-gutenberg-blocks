@@ -101,8 +101,6 @@ class ProductMeta extends AbstractProductMetaGrid {
 			$attributes['height'] = wc_get_theme_support( 'featured_block::default_height', 350 );
 		}
 
-		write_log( 'PRODUCTMETA::ATTRIBUTES' );
-		write_log( $attributes );
 		$icon = sprintf(
 			'<div class="wc-block-product-meta__icon-wrapper">
 				<div class="wc-block-product-meta__icon">
@@ -159,7 +157,7 @@ class ProductMeta extends AbstractProductMetaGrid {
 
 		$content = sprintf(
 			'<div class="wp-block-button aligncenter">
-				<a class="wp-block-button__link has-background" href="%1$s">%2$s</a>
+				<a class="wp-block-button__link has-text-color" href="%1$s">%2$s</a>
 			</div>',
 			esc_url( $product->get_permalink() ),
 			wp_kses_post( $attributes['linkText'] )
