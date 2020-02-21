@@ -87,7 +87,8 @@ class Metas extends WC_REST_Products_Controller {
 	public function get_items( $request ) {
 		$this->request = $request;
 
-		$metas = \Spine_js_woo::instance()->get_metas();
+		$instance = \Spine_js_woo::instance();
+		$metas    = $instance->get_metas();
 		return $metas;
 
 	}

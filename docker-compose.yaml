@@ -29,7 +29,7 @@ services:
       WORDPRESS_TABLE_PREFIX:
       WORDPRESS_DEBUG:
     volumes:
-      - "./:/var/www/html/wp-content/plugins/woocommerce-gutenberg-products-block"
+      - ./:/var/www/html/wp-content/plugins/woocommerce-gutenberg-products-block
       - wordpress:/var/www/html
 
   wordpress-cli:
@@ -42,10 +42,10 @@ services:
     environment:
         WORDPRESS_HOST:
         WORDPRESS_TITLE:
-        WORDPRESS_LOGIN:
-        WORDPRESS_PASSWORD:
+        WORDPRESS_LOGIN: admin
+        WORDPRESS_PASSWORD: example
         WORDPRESS_PORT:
-        WORDPRESS_EMAIL:
+        WORDPRESS_EMAIL: axel@webpremiere.dev
         DOMAIN_NAME:
     volumes:
       - ./:/var/www/html/wp-content/plugins/woocommerce-gutenberg-products-block
