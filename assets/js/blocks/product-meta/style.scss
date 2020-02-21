@@ -152,10 +152,14 @@
 		del .woocommerce-Price-amount.amount {
 			font-weight: 500;
 		}
-		ins .woocommerce-Price-amount.amount {
-			padding: 6px 9px;
-			background-color: #ba0105;
-			border-radius: 5px;
+		ins {
+			text-decoration: none;
+
+			.woocommerce-Price-amount.amount {
+				padding: 6px 9px;
+				background-color: #ba0105;
+				border-radius: 5px;
+			}
 		}
 	}
 
