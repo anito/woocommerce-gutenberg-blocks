@@ -8,7 +8,6 @@
 namespace Automattic\WooCommerce\Blocks\BlockTypes;
 
 defined( 'ABSPATH' ) || exit;
-require_once SPINEAPP_PLUGIN_DIR . 'classes/class-woo-custom-fields.php';
 
 /**
  * FeaturedProduct class.
@@ -72,8 +71,7 @@ class ProductMeta extends AbstractProductMetaGrid {
 	 */
 	public function render( $attributes = array(), $content = '' ) {
 
-		write_log( 'PRODUCTMETA::CONTENT' );
-		write_log( $content );
+		require_once \SPINEAPP_PLUGIN_DIR . 'classes/class-woo-custom-fields.php';
 
 		$id = ! empty( $attributes['metas'] ) ? (int) $attributes['metas'][0] : null;
 		if ( ! isset( $id ) ) {

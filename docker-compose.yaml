@@ -29,6 +29,10 @@ services:
       WORDPRESS_TABLE_PREFIX:
       WORDPRESS_DEBUG:
     volumes:
+      - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+      - ../gutenberg-examples:/var/www/html/wp-content/plugins/gutenberg-examples
+      - ../spine-app:/var/www/html/wp-content/plugins/spine-app
+      - ../log-debug:/var/www/html/wp-content/plugins/log-debug
       - ./:/var/www/html/wp-content/plugins/woocommerce-gutenberg-products-block
       - wordpress:/var/www/html
 
