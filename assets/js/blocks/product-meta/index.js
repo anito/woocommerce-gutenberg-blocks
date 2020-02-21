@@ -39,6 +39,10 @@ registerBlockType( 'woocommerce/product-meta', {
 	},
 	example,
 	attributes: {
+		permalink: {
+			type: 'string',
+		},
+
 		headingLevel: {
 			type: 'number',
 			default: 5,
@@ -129,14 +133,6 @@ registerBlockType( 'woocommerce/product-meta', {
 		linkText: {
 			type: 'string',
 			default: __( 'Shop now', 'woo-gutenberg-products-block' ),
-		},
-
-		/**
-		 * Text for the textbox.
-		 */
-		textboxText: {
-			type: 'string',
-			default: __( 'Some explanation', 'woo-gutenberg-products-block' ),
 		},
 
 		/**

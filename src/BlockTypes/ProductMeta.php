@@ -72,16 +72,25 @@ class ProductMeta extends AbstractProductMetaGrid {
 	 */
 	public function render( $attributes = array(), $content = '' ) {
 
+		write_log( 'PRODUCTMETA::CONTENT' );
+		write_log( $content );
+
 		$id = ! empty( $attributes['metas'] ) ? (int) $attributes['metas'][0] : null;
 		if ( ! isset( $id ) ) {
 			return '';
 		}
-		$ids     = \Spine_js_woo::instance()->get_products_from_meta( $id );
-		$product = wc_get_product( $ids[0] );
+		$instance = \Spine_js_woo::instance();
+		$ids      = $instance->get_products_from_meta( $id );
+		$id       = ! empty( $ids ) ? $ids[0] : 0;
+		$product  = wc_get_product( $id );
 
 		if ( empty( $product ) ) {
 			return '';
 		}
+
+		$header = $instance->get_product_meta( $id, '_hal_header', $attributes['slug'] );
+		$footer = $instance->get_product_meta( $id, '_hal_footer', $attributes['slug'] );
+
 		/**
 		 * Remove extra fields from Germanized
 		 */
@@ -92,6 +101,8 @@ class ProductMeta extends AbstractProductMetaGrid {
 			$attributes['height'] = wc_get_theme_support( 'featured_block::default_height', 350 );
 		}
 
+		write_log( 'PRODUCTMETA::ATTRIBUTES' );
+		write_log( $attributes );
 		$icon = sprintf(
 			'<div class="wc-block-product-meta__icon-wrapper">
 				<div class="wc-block-product-meta__icon">
@@ -103,7 +114,7 @@ class ProductMeta extends AbstractProductMetaGrid {
 					</div>
 				</div>
 			</div>',
-			wp_kses_post( $attributes['heading'] ),
+			wp_kses_post( $header ),
 			esc_url( $attributes['iconSrc'] )
 		);
 
@@ -131,20 +142,28 @@ class ProductMeta extends AbstractProductMetaGrid {
 
 		$note_str = sprintf(
 			'<div class="wc-block-product-meta__footer">%s</div>',
-			wp_kses_post( $attributes['note'] )
+			wp_kses_post( $footer )
 		);
 
 		$output  = sprintf( '<div class="%1$s" style="%2$s">', $this->get_classes( $attributes ), $this->get_styles( $attributes, $product ) );
 		$output .= $icon;
 		$output .= '<div class="wc-block-product-meta__wrapper">';
-
 		$output .= $title;
+
 		if ( $attributes['showDesc'] ) {
 			$output .= $desc_str;
 		}
 		if ( $attributes['showPrice'] ) {
 			$output .= $price_str;
 		}
+
+		$content = sprintf(
+			'<div class="wp-block-button aligncenter">
+				<a class="wp-block-button__link has-background" href="%1$s">%2$s</a>
+			</div>',
+			esc_url( $product->get_permalink() ),
+			wp_kses_post( $attributes['linkText'] )
+		);
 		$output .= '<div class="wc-block-product-meta__link">' . $content . '</div>';
 		$output .= $note_str;
 		$output .= '</div>';

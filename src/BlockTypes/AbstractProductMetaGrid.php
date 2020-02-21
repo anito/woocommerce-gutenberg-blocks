@@ -69,11 +69,11 @@ abstract class AbstractProductMetaGrid extends AbstractDynamicBlock {
 			'mediaSrc'          => $this->get_schema_string(),
 			'iconId'            => $this->get_schema_number( 0 ),
 			'iconSrc'           => $this->get_schema_string( '/wp-content/plugins/woocommerce-gutenberg-products-block/assets/img/placeholder.svg' ),
-			'heading'           => $this->get_schema_string( 'Lehmann Aktion' ),
+			'heading'           => $this->get_schema_string( 'Aktion' ),
 			'note'              => $this->get_schema_string( 'Wir lieben Shopping' ),
 			'height'            => $this->get_schema_number( 350 ),
 			'overlayColor'      => $this->get_schema_string(),
-			'linkText'          => $this->get_schema_string(),
+			'linkText'          => $this->get_schema_string( __( 'Shop now', 'woo-gutenberg-products-block' ) ),
 			'productId'         => $this->get_schema_string( 'preview' ),
 			'previewProduct'    => $this->get_schema_string(),
 		);

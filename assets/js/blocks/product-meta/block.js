@@ -287,6 +287,7 @@ const ProductMeta = ( {
 			showIcon,
 			iconSrc,
 		} = attributes;
+
 		const classes = classnames(
 			'wc-block-product-meta',
 			{
@@ -319,6 +320,7 @@ const ProductMeta = ( {
 		};
 
 		const setExtraProductMetas = () => {
+			const permalink = product.permalink;
 			const metas = product.meta_data;
 			const slug = attributes.slug;
 			const note =
@@ -331,7 +333,12 @@ const ProductMeta = ( {
 					m.filter(
 						( item ) => item.key === `_hal_header_${ slug }`
 					) )( metas )[ 0 ].value || attributes.heading;
-			setAttributes( { heading, note } );
+			setAttributes( {
+				heading,
+				note,
+				permalink,
+				productId: product.id,
+			} );
 		};
 		setExtraProductMetas();
 
@@ -422,19 +429,20 @@ const ProductMeta = ( {
 				},
 			],
 		];
-		return attributes.productId === 'preview' ? (
+		return attributes.productId ? (
 			<div className="wp-block-button aligncenter" style={ wrapperStyle }>
-				<RichText.Content
-					tagName="a"
-					className={ buttonClasses }
-					title={ attributes.linkText }
-					style={ buttonStyle }
-					value={ attributes.linkText }
-					target={ product.url }
-				/>
+				<div className="my-wrapper">
+					<RichText.Content
+						tagName="a"
+						className={ buttonClasses }
+						style={ buttonStyle }
+						value={ attributes.linkText }
+						target={ product.permalink }
+					/>
+				</div>
 			</div>
 		) : (
-			<InnerBlocks template={ buttonTemplate } templateLock="all" />
+			<InnerBlocks template={ buttonTemplate } />
 		);
 	};
 	const renderHeader = () => {
