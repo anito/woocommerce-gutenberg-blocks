@@ -51,6 +51,7 @@
 			line-height: 1em;
 			color: #e5e5e5;
 			text-align: left;
+			text-transform: uppercase;
 
 			div {
 				overflow: hidden;
@@ -147,6 +148,15 @@
 	.wc-block-product-meta__price {
 		font-size: 2em;
 		font-weight: 700;
+
+		del .woocommerce-Price-amount.amount {
+			font-weight: 500;
+		}
+		ins .woocommerce-Price-amount.amount {
+			padding: 6px 9px;
+			background-color: #ba0105;
+			border-radius: 5px;
+		}
 	}
 
 	.wc-block-product-meta__title,
