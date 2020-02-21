@@ -410,6 +410,7 @@ const ProductMeta = ( {
 	const renderButton = () => {
 		const buttonClasses = classnames(
 			'wp-block-button__link',
+			'has-text-color',
 			'is-style-fill'
 		);
 		const buttonStyle = {
