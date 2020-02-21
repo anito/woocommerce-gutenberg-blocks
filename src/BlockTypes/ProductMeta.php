@@ -226,6 +226,10 @@ class ProductMeta extends AbstractProductMetaGrid {
 			$classes[] = "align{$attributes['align']}";
 		}
 
+		if ( isset( $attributes['inclineFooter'] ) && ( 0 !== $attributes['inclineFooter'] ) ) {
+			$classes[] = 'has-incline-footer';
+		}
+
 		if ( isset( $attributes['dimRatio'] ) && ( 0 !== $attributes['dimRatio'] ) ) {
 			$classes[] = 'has-background-dim';
 

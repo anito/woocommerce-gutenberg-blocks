@@ -39,6 +39,11 @@ registerBlockType( 'woocommerce/product-meta', {
 	},
 	example,
 	attributes: {
+		inclineFooter: {
+			type: 'boolean',
+			default: false,
+		},
+
 		permalink: {
 			type: 'string',
 		},

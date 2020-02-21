@@ -198,6 +198,17 @@ const ProductMeta = ( {
 							() => setAttributes( { showIcon: ! attributes.showIcon } )
 						}
 					/>
+					<ToggleControl
+						label={ __(
+							'Geneigte Fußzeile',
+							'woo-gutenberg-products-block'
+						) }
+						checked={ attributes.inclineFooter }
+						onChange={
+							// prettier-ignore
+							() => setAttributes( { inclineFooter: ! attributes.inclineFooter } )
+						}
+					/>
 				</PanelBody>
 				<PanelBody
 					title={ __(
@@ -293,6 +304,7 @@ const ProductMeta = ( {
 			{
 				'is-selected': isSelected && attributes.productId !== 'preview',
 				'is-loading': ! product && isLoading,
+				'has-incline-footer': !! attributes.inclineFooter,
 				'is-not-found': ! product && ! isLoading,
 				'has-icon': attributes.showIcon,
 				'has-background-dim': dimRatio !== 0,
