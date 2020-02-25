@@ -85,9 +85,12 @@ class ProductMetas extends WC_REST_Products_Controller {
 	 */
 	public function get_item( $request ) {
 
+		require_once \SPINEAPP_PLUGIN_DIR . 'classes/class-woo-custom-fields.php';
+
 		$meta = $request['id'];
 
-		$ids = \Spine_js_woo::instance()->get_products_from_meta( $meta );
+		$instance = \Spine_js_woo::instance();
+		$ids      = $instance()->get_products_from_meta( $meta );
 
 		$objects = array();
 		foreach ( $ids as $id ) {
