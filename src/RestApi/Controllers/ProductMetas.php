@@ -90,7 +90,7 @@ class ProductMetas extends WC_REST_Products_Controller {
 		$meta = $request['id'];
 
 		$instance = \Spine_js_woo::instance();
-		$ids      = $instance()->get_products_from_meta( $meta );
+		$ids      = $instance->get_products_from_meta( $meta );
 
 		$objects = array();
 		foreach ( $ids as $id ) {
