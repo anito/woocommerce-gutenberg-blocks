@@ -1,3 +1,8 @@
+# Highligt Special (Unique) Products
+
+- based on Custom Product Metas
+- currently it only works in conjunction with another WP Plugin (Spine App) for configuring the necessary Product Metas
+
 # WooCommerce Product Blocks
 
 Feature plugin for WooCommerce + Gutenberg. This plugin serves as a space to iterate and explore new Blocks for WooCommerce, and how WooCommerce might work with the block editor.
