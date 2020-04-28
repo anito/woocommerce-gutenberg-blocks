@@ -3,17 +3,19 @@ version: '3.3'
 services:
 
   db:
-    image: mariadb:10.4
+    image: mariadb:10.5
+    container_name: ${COMPOSE_PROJECT_NAME}_mariadb
     restart: on-failure
     environment:
-      MYSQL_DATABASE: testdb
+      MYSQL_DATABASE: wordpress
       MYSQL_USER: wordpress
       MYSQL_PASSWORD: wordpress
       MYSQL_RANDOM_ROOT_PASSWORD: 'yes'
     volumes:
       - db:/var/lib/mysql
 
-  wordpress-www:
+  wordpress:
+    container_name: ${COMPOSE_PROJECT_NAME}_wordpress
     depends_on:
       - db
     build:
@@ -26,35 +28,36 @@ services:
       WORDPRESS_DB_NAME:
       WORDPRESS_DB_USER:
       WORDPRESS_DB_PASSWORD:
-      WORDPRESS_TABLE_PREFIX:
-      WORDPRESS_DEBUG:
+      WORDPRESS_TABLE_PREFIX: wp_
+      WORDPRESS_DEBUG: 1
     volumes:
       - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
-      - ../gutenberg-examples:/var/www/html/wp-content/plugins/gutenberg-examples
       - ../spine-app:/var/www/html/wp-content/plugins/spine-app
       - ../log-debug:/var/www/html/wp-content/plugins/log-debug
       - ./:/var/www/html/wp-content/plugins/woocommerce-gutenberg-products-block
-      - wordpress:/var/www/html
+      - ./wordpress:/var/www/html
 
   wordpress-cli:
+    container_name: ${COMPOSE_PROJECT_NAME}_wpcli
     depends_on:
       - db
-      - wordpress-www
+      - wordpress
     build:
         context: ./bin/docker/wp-cli
     restart: on-failure
     environment:
         WORDPRESS_HOST:
         WORDPRESS_TITLE:
-        WORDPRESS_LOGIN: admin
-        WORDPRESS_PASSWORD: example
+        WORDPRESS_LOGIN:
+        WORDPRESS_PASSWORD:
         WORDPRESS_PORT:
-        WORDPRESS_EMAIL: axel@webpremiere.dev
+        WORDPRESS_EMAIL:
         DOMAIN_NAME:
     volumes:
+      - ../spine-app:/var/www/html/wp-content/plugins/spine-app
+      - ../log-debug:/var/www/html/wp-content/plugins/log-debug
       - ./:/var/www/html/wp-content/plugins/woocommerce-gutenberg-products-block
-      - wordpress:/var/www/html
+      - ./wordpress:/var/www/html
 
 volumes:
   db:
-  wordpress:

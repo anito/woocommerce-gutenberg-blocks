@@ -104,6 +104,21 @@ const stableMainEntry = {
 	// Shared blocks code
 	blocks: './assets/js/index.js',
 
+	// @wordpress/components styles
+	'panel-style': './node_modules/wordpress-components/src/panel/style.scss',
+	'custom-select-control-style':
+		'./node_modules/wordpress-components/src/custom-select-control/style.scss',
+	'spinner-style':
+		'./node_modules/wordpress-components/src/spinner/style.scss',
+	'snackbar-notice-style':
+		'./node_modules/wordpress-components/src/snackbar/style.scss',
+
+	// Styles for grid blocks. WP <=5.2 doesn't have the All Products block,
+	// so this file would not be included if not explicitly declared here.
+	// This file is excluded from the default build so CSS styles are included
+	// in the other the components are imported.
+	'product-list-style': './assets/js/base/components/product-list/style.scss',
+
 	// Blocks
 	'handpicked-products': './assets/js/blocks/handpicked-products/index.js',
 	'product-best-sellers': './assets/js/blocks/product-best-sellers/index.js',
@@ -130,9 +145,6 @@ const stableMainEntry = {
 	'active-filters': './assets/js/blocks/active-filters/index.js',
 	'block-error-boundary':
 		'./assets/js/base/components/block-error-boundary/style.scss',
-	'panel-style': './node_modules/@wordpress/components/src/panel/style.scss',
-	'custom-select-control-style':
-		'./node_modules/@wordpress/components/src/custom-select-control/style.scss',
 };
 
 const experimentalMainEntry = {
@@ -154,8 +166,8 @@ const stableFrontEndEntry = {
 };
 
 const experimentalFrontEndEntry = {
-	checkout: './assets/js/blocks/cart-checkout/checkout/frontend.js',
 	cart: './assets/js/blocks/cart-checkout/cart/frontend.js',
+	checkout: './assets/js/blocks/cart-checkout/checkout/frontend.js',
 };
 
 const frontEndEntry =
@@ -263,13 +275,19 @@ const getMainConfig = ( options = {} ) => {
 							loader: 'sass-loader',
 							query: {
 								includePaths: [ 'node_modules' ],
-								data:
-									'@import "~@wordpress/base-styles/colors"; ' +
-									'@import "~@wordpress/base-styles/variables"; ' +
-									'@import "~@wordpress/base-styles/mixins"; ' +
-									'@import "~@wordpress/base-styles/breakpoints"; ' +
-									'@import "~@wordpress/base-styles/animations"; ' +
-									'@import "~@wordpress/base-styles/z-index"; ',
+								data: [
+									'colors',
+									'breakpoints',
+									'variables',
+									'mixins',
+									'animations',
+									'z-index',
+								]
+									.map(
+										( imported ) =>
+											`@import "~@wordpress/base-styles/${ imported }";`
+									)
+									.join( ' ' ),
 							},
 						},
 					],
@@ -284,12 +302,21 @@ const getMainConfig = ( options = {} ) => {
 						{
 							loader: 'sass-loader',
 							query: {
-								includePaths: [ 'assets/css/abstracts' ],
-								data:
-									'@import "_colors"; ' +
-									'@import "_variables"; ' +
-									'@import "_breakpoints"; ' +
-									'@import "_mixins"; ',
+								includePaths: [
+									'assets/css/abstracts',
+									'node_modules',
+								],
+								data: [
+									'_colors',
+									'_variables',
+									'_breakpoints',
+									'_mixins',
+								]
+									.map(
+										( imported ) =>
+											`@import "${ imported }";`
+									)
+									.join( ' ' ),
 							},
 						},
 					],
@@ -439,8 +466,146 @@ const getFrontConfig = ( options = {} ) => {
 	};
 };
 
+const getPaymentMethodsExtensionConfig = ( options = {} ) => {
+	const { alias, resolvePlugins = [] } = options;
+	const resolve = alias
+		? {
+				alias,
+				plugins: resolvePlugins,
+		  }
+		: {
+				plugins: resolvePlugins,
+		  };
+	return {
+		entry: {
+			'wc-payment-method-stripe':
+				'./assets/js/payment-method-extensions/payment-methods/stripe/index.js',
+			'wc-payment-method-cheque':
+				'./assets/js/payment-method-extensions/payment-methods/cheque/index.js',
+		},
+		output: {
+			devtoolNamespace: 'wc',
+			path: path.resolve( __dirname, '../build/' ),
+			filename: `[name].js`,
+			// This fixes an issue with multiple webpack projects using chunking
+			// overwriting each other's chunk loader function.
+			// See https://webpack.js.org/configuration/output/#outputjsonpfunction
+			jsonpFunction: 'webpackWcBlocksPaymentMethodExtensionJsonp',
+		},
+		module: {
+			rules: [
+				{
+					test: /\.jsx?$/,
+					exclude: /node_modules/,
+					use: {
+						loader: 'babel-loader?cacheDirectory',
+						options: {
+							presets: [
+								[
+									'@babel/preset-env',
+									{
+										modules: false,
+										targets: {
+											browsers: [
+												'extends @wordpress/browserslist-config',
+											],
+										},
+									},
+								],
+							],
+							plugins: [
+								require.resolve(
+									'@babel/plugin-proposal-object-rest-spread'
+								),
+								require.resolve(
+									'@babel/plugin-transform-react-jsx'
+								),
+								require.resolve(
+									'@babel/plugin-proposal-async-generator-functions'
+								),
+								require.resolve(
+									'@babel/plugin-transform-runtime'
+								),
+								require.resolve(
+									'@babel/plugin-proposal-class-properties'
+								),
+								NODE_ENV === 'production'
+									? require.resolve(
+											'babel-plugin-transform-react-remove-prop-types'
+									  )
+									: false,
+							].filter( Boolean ),
+						},
+					},
+				},
+				{
+					test: /\.s?css$/,
+					exclude: /node_modules/,
+					use: [
+						MiniCssExtractPlugin.loader,
+						{ loader: 'css-loader', options: { importLoaders: 1 } },
+						'postcss-loader',
+						{
+							loader: 'sass-loader',
+							query: {
+								includePaths: [
+									'assets/css/abstracts',
+									'node_modules',
+								],
+								data: [
+									'_colors',
+									'_variables',
+									'_breakpoints',
+									'_mixins',
+								]
+									.map(
+										( imported ) =>
+											`@import "${ imported }";`
+									)
+									.join( ' ' ),
+							},
+						},
+					],
+				},
+			],
+		},
+		plugins: [
+			new WebpackRTLPlugin( {
+				filename: `[name]-rtl.css`,
+				minify: {
+					safe: true,
+				},
+			} ),
+			new MiniCssExtractPlugin( {
+				filename: `[name].css`,
+			} ),
+			new ProgressBarPlugin( {
+				format:
+					chalk.blue( 'Build payment method extension scripts' ) +
+					' [:bar] ' +
+					chalk.green( ':percent' ) +
+					' :msg (:elapsed seconds)',
+			} ),
+			new DependencyExtractionWebpackPlugin( {
+				injectPolyfill: true,
+				requestToExternal,
+				requestToHandle,
+			} ),
+			new DefinePlugin( {
+				// Inject the `WOOCOMMERCE_BLOCKS_PHASE` global, used for feature flagging.
+				'process.env.WOOCOMMERCE_BLOCKS_PHASE': JSON.stringify(
+					// eslint-disable-next-line woocommerce/feature-flag
+					process.env.WOOCOMMERCE_BLOCKS_PHASE || 'experimental'
+				),
+			} ),
+		],
+		resolve,
+	};
+};
+
 module.exports = {
 	getAlias,
 	getFrontConfig,
 	getMainConfig,
+	getPaymentMethodsExtensionConfig,
 };

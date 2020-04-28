@@ -47,11 +47,23 @@ else
         --skip-email
 fi
 
+wp option update blogname "$WORDPRESS_TITLE "
+wp language core install de_DE
+wp language core activate de_DE
 wp plugin install woocommerce --activate
 wp plugin activate woocommerce-gutenberg-products-block
-wp theme install twentynineteen --activate
-wp user create customer customer@woocommercecoree2etestsuite.com --user_pass=password --role=customer --path=/var/www/html
-wp post create --post_type=page --post_status=publish --post_title='Ready' --post_content='E2E-tests.'
+wp plugin activate spine-app
+wp plugin activate log-debug
+wp rewrite structure '/blog/%postname%/'
+wp theme install storefront --activate
+if [ -f /var/www/html/.ready-post-initialized ]
+then
+    echo "The Ready Post has already been created."
+else
+    wp user create customer customer@woocommercecoree2etestsuite.com --user_pass=password --role=customer --path=/var/www/html
+    wp post create --post_type=page --post_status=publish --post_title='Ready' --post_content='E2E-tests.'
+    touch /var/www/html/.ready-post-initialized
+fi
 
 declare -r CURRENT_DOMAIN=$(wp option get siteurl)
 
@@ -61,4 +73,4 @@ if ! [[ ${CURRENT_DOMAIN} == ${URL} ]]; then
 fi
 
 echo "Visit $(wp option get siteurl)"
-touch /var/www/html/.initialized
+# touch /var/www/html/.initialized
