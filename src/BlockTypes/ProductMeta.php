@@ -74,6 +74,7 @@ class ProductMeta extends AbstractDynamicBlock {
 	 */
 	public function render( $attributes = array(), $content = '' ) {
 
+<<<<<<< HEAD
 		/**
 		 * check for Spine App Pugin and its settings
 		 */
@@ -85,11 +86,19 @@ class ProductMeta extends AbstractDynamicBlock {
 		/**
 		 * check for Custom Product Meta definitions
 		 */
+=======
+		require_once \SPINEAPP_PLUGIN_DIR . 'classes/class-woo-custom-fields.php';
+
+>>>>>>> 464432eac8a2cdfe69532cb47f0f1ba5523f4083
 		$id = ! empty( $attributes['metas'] ) ? (int) $attributes['metas'][0] : null;
 		if ( ! isset( $id ) ) {
 			return '';
 		}
+<<<<<<< HEAD
 		$instance = new \Spine_js_woo();
+=======
+		$instance = \Spine_js_woo::instance();
+>>>>>>> 464432eac8a2cdfe69532cb47f0f1ba5523f4083
 		$ids      = $instance->get_products_from_meta( $id );
 		$id       = ! empty( $ids ) ? $ids[0] : 0;
 		$product  = wc_get_product( $id );
