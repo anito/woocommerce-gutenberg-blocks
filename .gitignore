@@ -16,3 +16,12 @@ xcuserdata
 # svn & cvs
 .svn
 CVS
+/*
+!.gitignore
+!README.md
+!readme.txt
+!/assets
+!/build
+!/src
+!/vendor
+!woocommerce-gutenberg-products-block.php
