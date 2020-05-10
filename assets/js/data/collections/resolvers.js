@@ -78,6 +78,7 @@ export function* getCollection( namespace, resourceName, query, ids ) {
 		);
 	}
 }
+
 /**
  * Resolver for retrieving a specific collection header for the given arguments
  *
