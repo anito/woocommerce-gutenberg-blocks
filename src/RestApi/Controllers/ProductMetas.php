@@ -85,24 +85,17 @@ class ProductMetas extends WC_REST_Products_Controller {
 	 */
 	public function get_item( $request ) {
 
-<<<<<<< HEAD
 		/**
 		 * check for Spine App Pugin and its settings
 		 */
 		if( ! defined( 'SPINEAPP_PLUGIN_DIR' ) || ! class_exists( 'Spine_js_woo' ))
 			return;
 
-=======
->>>>>>> 464432eac8a2cdfe69532cb47f0f1ba5523f4083
 		require_once \SPINEAPP_PLUGIN_DIR . 'classes/class-woo-custom-fields.php';
 
 		$meta = $request['id'];
 
-<<<<<<< HEAD
 		$instance = new \Spine_js_woo();
-=======
-		$instance = \Spine_js_woo::instance();
->>>>>>> 464432eac8a2cdfe69532cb47f0f1ba5523f4083
 		$ids      = $instance->get_products_from_meta( $meta );
 
 		$objects = array();
