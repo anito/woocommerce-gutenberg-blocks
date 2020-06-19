@@ -221,6 +221,17 @@ const ProductMeta = ( {
 							() => setAttributes( { hasButtonBorder: ! attributes.hasButtonBorder } )
 						}
 					/>
+					<ToggleControl
+						label={ __(
+							'Radialer Background',
+							'woo-gutenberg-products-block'
+						) }
+						checked={ attributes.hasRadialBackground }
+						onChange={
+							// prettier-ignore
+							() => setAttributes( { hasRadialBackground: ! attributes.hasRadialBackground } )
+						}
+					/>
 				</PanelBody>
 				<PanelBody
 					title={ __(
@@ -318,6 +329,7 @@ const ProductMeta = ( {
 				'is-loading': ! product && isLoading,
 				'has-incline-footer': attributes.hasInclineFooter,
 				'has-button-border': attributes.hasButtonBorder,
+				'has-radial-background': attributes.hasRadialBackground,
 				'is-not-found': ! product && ! isLoading,
 				'has-icon': attributes.showIcon,
 				'has-background-dim': dimRatio !== 0,
@@ -374,7 +386,7 @@ const ProductMeta = ( {
 						<div className="wc-block-product-meta__icon">
 							<div className="icon-text">{ renderHeader() }</div>
 							<div className="icon-img">
-								<img src={ iconSrc } alt="icon" rel="icon" />
+								<img src={ iconSrc } alt="icon" />
 							</div>
 						</div>
 					</div>

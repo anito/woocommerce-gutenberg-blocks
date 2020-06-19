@@ -39,6 +39,7 @@ class ProductMeta extends AbstractDynamicBlock {
 		'showIcon'           => true,
 		'hasInclineFooter'   => false,
 		'hasButtonBorder'    => false,
+		'hasRadialBackground'=> true,
 	);
 
 	/**
@@ -153,7 +154,7 @@ class ProductMeta extends AbstractDynamicBlock {
 			'*** '.wp_kses_post( $footer ).' ***'
 		);
 
-		$output = '<div class="block-wrapper">';
+		$output = '<div class="block-wrapper test">';
 
 		if ( $attributes['showIcon'] ) {
 			$output .= $icon;
@@ -242,6 +243,10 @@ class ProductMeta extends AbstractDynamicBlock {
 
 		if ( $attributes['hasButtonBorder'] ) {
 			$classes[] = 'has-button-border';
+		}
+
+		if ( $attributes['hasRadialBackground'] ) {
+			$classes[] = 'has-radial-background';
 		}
 
 		if ( isset( $attributes['dimRatio'] ) && ( 0 !== $attributes['dimRatio'] ) ) {

@@ -49,6 +49,11 @@ registerBlockType( 'woocommerce/product-meta', {
 			default: false,
 		},
 
+		hasRadialBackground: {
+			type: 'boolean',
+			default: true,
+		},
+
 		permalink: {
 			type: 'string',
 		},
